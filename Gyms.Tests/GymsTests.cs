@@ -36,7 +36,7 @@ namespace Gyms.Tests
         [Test]
         public void CapacityCannotNegativeNumber()
         {
-            Assert.Throws<ArgumentNullException>(() => gym = new Gym("", 70));
+            Assert.Throws<ArgumentException>(() => gym = new Gym("GymName", -1));
         }
     }
 }
