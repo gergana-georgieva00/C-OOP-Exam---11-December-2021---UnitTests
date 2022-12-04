@@ -38,5 +38,11 @@ namespace Gyms.Tests
         {
             Assert.Throws<ArgumentException>(() => gym = new Gym("GymName", -1));
         }
+
+        [Test]
+        public void CountGetterWorks()
+        {
+            Assert.That(gym.Count, Is.EqualTo(0));
+        }
     }
 }
