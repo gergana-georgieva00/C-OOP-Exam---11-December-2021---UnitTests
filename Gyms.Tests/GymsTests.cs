@@ -65,6 +65,8 @@ namespace Gyms.Tests
         {
             gym.AddAthlete(athlete);
             gym.RemoveAthlete("AthleteName");
+
+            Assert.Throws<InvalidOperationException>(() => gym.InjureAthlete("AthleteName"));
             Assert.That(gym.Count, Is.EqualTo(0));
         }
 
