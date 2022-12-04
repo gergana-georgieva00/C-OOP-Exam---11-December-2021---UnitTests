@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace Gyms.Tests
 {
@@ -18,6 +19,12 @@ namespace Gyms.Tests
         public void NameGetterWorks()
         {
             Assert.That(gym.Name, Is.EqualTo("GymName"));
+        }
+
+        [Test]
+        public void NameCannotBeNull()
+        {
+            Assert.Throws<ArgumentNullException>(() => gym = new Gym("", 70));
         }
     }
 }
