@@ -26,5 +26,17 @@ namespace Gyms.Tests
         {
             Assert.Throws<ArgumentNullException>(() => gym = new Gym("", 70));
         }
+
+        [Test]
+        public void CapacityGetterWorks()
+        {
+            Assert.That(gym.Capacity, Is.EqualTo(70));
+        }
+
+        [Test]
+        public void CapacityCannotNegativeNumber()
+        {
+            Assert.Throws<ArgumentNullException>(() => gym = new Gym("", 70));
+        }
     }
 }
