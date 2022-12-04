@@ -71,7 +71,7 @@ namespace Gyms.Tests
         [Test]
         public void InjureAthleteWithNonExistentAthleteShouldThrow()
         {
-            Assert.Throws<InvalidOperationException>(() => gym.RemoveAthlete("name"));
+            Assert.Throws<InvalidOperationException>(() => gym.InjureAthlete("name"));
         }
 
         [Test]
