@@ -44,5 +44,14 @@ namespace Gyms.Tests
         {
             Assert.That(gym.Count, Is.EqualTo(0));
         }
+
+
+        [Test]
+        public void AddAthleteOnFullGymShouldThrow()
+        {
+            gym = new Gym("name", 1);
+            gym.AddAthlete(athlete);
+            Assert.Throws<InvalidOperationException>(() => gym.AddAthlete(athlete));
+        }
     }
 }
