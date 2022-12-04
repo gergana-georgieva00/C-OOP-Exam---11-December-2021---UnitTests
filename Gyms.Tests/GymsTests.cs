@@ -81,5 +81,13 @@ namespace Gyms.Tests
             gym.InjureAthlete("AthleteName");
             Assert.That(athlete.IsInjured, Is.EqualTo(true));
         }
+
+
+        [Test]
+        public void ReportMethodWorks()
+        {
+            gym.AddAthlete(athlete);
+            Assert.That(gym.Report(), Is.EqualTo($"Active athletes at {"GymName"}: {"AthleteName"}"));
+        }
     }
 }
